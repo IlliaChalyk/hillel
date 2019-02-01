@@ -5,7 +5,6 @@ public class EvenThenOdd {
 
         int[] array = {2, 5, 2, 6, 3, 8, 6, 3, 7};
         sortEvenOdd(array);
-
     }
 
     private static void sortEvenOdd(int[] arr) {
@@ -27,7 +26,6 @@ public class EvenThenOdd {
         for (int i = 0; i < sorted.length; i++) {
             System.out.print(sorted[i] + " ");
         }
-
     }
 }
 
