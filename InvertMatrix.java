@@ -19,7 +19,6 @@ public class InvertMatrix {
         final int ROWS = matrix[0].length;
 
         int[][] reversed = new int[LINES][ROWS];
-        int[][] inverted = new int[LINES][ROWS];
 
         //revers
         for (int i = 0; i < LINES; i++) {
