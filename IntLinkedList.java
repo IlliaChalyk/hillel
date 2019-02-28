@@ -4,7 +4,24 @@ import com.hillel.lesson3.intlist.IntList;
 
 import java.util.Arrays;
 
-public class IntLinkedList implements IntList {
+public class IntLinkedList implements IntList, Stack, Queue {
+    //Stack________________
+    @Override
+    public void addFirst(int value) {
+        add(0, value);
+
+    }
+
+    @Override
+    public int peekFirst() {
+        return first.value;
+    }
+
+    @Override
+    public int removeFirst() {
+        return getAndRemoveFirst();
+    }
+    //_____________________
 
     private static class Element {
         int value;
@@ -34,6 +51,18 @@ public class IntLinkedList implements IntList {
         }
         size++;
     }
+
+    //Queue____________________
+    @Override
+    public int peek() {
+        return first.value;
+    }
+
+    @Override
+    public int poll() {
+        return getAndRemoveFirst();
+    }
+    //_________________________
 
     @Override
     public void clear() {
@@ -144,6 +173,12 @@ public class IntLinkedList implements IntList {
         for (int i = 0; i < index; i++) {
             tmp = tmp.next;
         }
+        return tmp;
+    }
+
+    private int getAndRemoveFirst() {
+        int tmp = first.value;
+        remove(0);
         return tmp;
     }
 }
